@@ -6,7 +6,7 @@
   <Network>bridge</Network>
   <Shell>sh</Shell>
   <Privileged>false</Privileged>
-  <Support>https://github.com/nofuturekid/tasmofleet/issues</Support>
+  <Support>https://forums.unraid.net/topic/201022-support-nofuturekid-tasmofleet/</Support>
   <Project>https://github.com/nofuturekid/tasmofleet</Project>
   <Overview>Fleet manager for Tasmota devices: inventory and health, safe over-the-air firmware updates (image header and chip-family checks), configuration backups with restore, fleet policy rules, and a Prometheus metrics endpoint. Devices fetch firmware over plain HTTP from a dedicated port of this container. MQTT is optional; every feature also works over HTTP alone. Network ranges, MQTT, firmware sources, backups and single sign-on are configured in the web UI after the first sign-in. The first admin password is written to initial-admin-password in the appdata folder.</Overview>
   <Category>HomeAutomation: Tools:</Category>

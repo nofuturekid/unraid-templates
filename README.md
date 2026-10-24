@@ -17,7 +17,7 @@ Notes on the tasmofleet template:
 - Tasmota devices download firmware over plain HTTP from the "Firmware server" port (container port 80, default host port 8081, because host port 80 is the Unraid WebGUI). Enter `http://SERVER-IP:8081/` as the firmware URL on tasmofleet's System settings page.
 - Behind a reverse proxy: set Trusted proxies and Public URL, set Self-signed TLS to `false`, UI listen to `:8080` and the Web UI container port to `8080`, and use your proxy URL as WebUI.
 
-## Submitting (maintainer checklist, not yet done)
+## Submitting (maintainer checklist)
 
 1. Forum support thread: Unraid forum -> Docker Containers (https://forums.unraid.net/forum/58-docker-containers/) -> new topic, title `[Support] nofuturekid - TasmoFleet`. First post: short description, link to the GitHub project and the template, install notes from above. Copy the topic URL.
 2. Put that URL into `<Support>` in `templates/tasmofleet.xml` (replacing the GitHub issues link) and add `<Forum>TOPIC_URL</Forum>` to `ca_profile.xml`. Commit and push.
