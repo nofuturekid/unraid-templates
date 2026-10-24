@@ -1,0 +1,30 @@
+<?xml version="1.0"?>
+<Container version="2">
+  <Name>TasmoFleet</Name>
+  <Repository>ghcr.io/nofuturekid/tasmofleet:latest</Repository>
+  <Registry>https://github.com/nofuturekid/tasmofleet/pkgs/container/tasmofleet</Registry>
+  <Network>bridge</Network>
+  <Shell>sh</Shell>
+  <Privileged>false</Privileged>
+  <Support>https://github.com/nofuturekid/tasmofleet/issues</Support>
+  <Project>https://github.com/nofuturekid/tasmofleet</Project>
+  <Overview>Fleet manager for Tasmota devices: inventory and health, safe over-the-air firmware updates (image header and chip-family checks), configuration backups with restore, fleet policy rules, and a Prometheus metrics endpoint. Devices fetch firmware over plain HTTP from a dedicated port of this container. MQTT is optional; every feature also works over HTTP alone. Network ranges, MQTT, firmware sources, backups and single sign-on are configured in the web UI after the first sign-in. The first admin password is written to initial-admin-password in the appdata folder.</Overview>
+  <Category>HomeAutomation: Tools:</Category>
+  <WebUI>https://[IP]:[PORT:8443]/</WebUI>
+  <TemplateURL>https://raw.githubusercontent.com/nofuturekid/unraid-templates/main/templates/tasmofleet.xml</TemplateURL>
+  <Icon>https://raw.githubusercontent.com/nofuturekid/tasmofleet/main/assets/branding/icon-512.png</Icon>
+  <ExtraParams>--health-start-period=10s</ExtraParams>
+  <PostArgs/>
+  <Requires/>
+  <Config Name="Web UI (HTTPS)" Target="8443" Default="8443" Mode="tcp" Description="Web UI and API. Serves a self-signed certificate by default; put a reverse proxy in front for a trusted one (see the Trusted proxies variable)." Type="Port" Display="always" Required="true" Mask="false">8443</Config>
+  <Config Name="Firmware server" Target="80" Default="8081" Mode="tcp" Description="Device-facing firmware server (plain HTTP; ESP8266 devices cannot use TLS). Tasmota devices download firmware from this port during an update. Choose any free host port that the devices can reach, and enter the resulting http://SERVER-IP:PORT/ URL as the firmware URL on the System settings page. Host port 80 is used by the Unraid web interface." Type="Port" Display="always" Required="true" Mask="false">8081</Config>
+  <Config Name="Data" Target="/data" Default="/mnt/user/appdata/tasmofleet" Mode="rw" Description="Database, secret.key, firmware cache and backups. Back it up as a whole: without secret.key the stored device passwords cannot be decrypted. The container runs as UID/GID 65532 (not nobody 99:100): run 'chown -R 65532:65532 /mnt/user/appdata/tasmofleet' once if the folder is not writable." Type="Path" Display="always" Required="true" Mask="false">/mnt/user/appdata/tasmofleet</Config>
+  <Config Name="UI listen" Target="TASMOFLEET_LISTEN" Default=":8443" Mode="" Description="Listener for UI and API inside the container. Must match the container port of the Web UI port mapping above." Type="Variable" Display="advanced" Required="false" Mask="false">:8443</Config>
+  <Config Name="Self-signed TLS" Target="TASMOFLEET_TLS_SELF_SIGNED" Default="true" Mode="" Description="Serve a self-signed certificate on the UI listener. Set to false only when Trusted proxies is set (reverse proxy terminates TLS) and change UI listen to :8080 plus the container port of the Web UI mapping." Type="Variable" Display="advanced" Required="false" Mask="false">true</Config>
+  <Config Name="Firmware listen" Target="TASMOFLEET_FIRMWARE_LISTEN" Default=":80" Mode="" Description="Listener of the device-facing firmware server inside the container. Keep :80 to match the Firmware server port mapping." Type="Variable" Display="advanced" Required="false" Mask="false">:80</Config>
+  <Config Name="Public URL" Target="TASMOFLEET_PUBLIC_URL" Default="" Mode="" Description="Only behind a reverse proxy or with single sign-on: external URL of the UI, e.g. https://tasmofleet.example.com. Used as OIDC redirect and logout target. Leave empty otherwise." Type="Variable" Display="advanced" Required="false" Mask="false"/>
+  <Config Name="Trusted proxies" Target="TASMOFLEET_TRUSTED_PROXIES" Default="" Mode="" Description="Only behind a reverse proxy: comma separated CIDRs of the proxy, e.g. 192.168.1.10/32. Forwarded headers and header authentication are trusted only from these peers. Leave empty otherwise." Type="Variable" Display="advanced" Required="false" Mask="false"/>
+  <Config Name="Initial admin password" Target="TASMOFLEET_INITIAL_ADMIN_PASSWORD" Default="" Mode="" Description="Password of the first local admin ('admin') on a fresh install; it must be changed at the first sign-in. Empty: a random one is written to initial-admin-password in the appdata folder." Type="Variable" Display="advanced" Required="false" Mask="true"/>
+  <Config Name="Metrics token" Target="TASMOFLEET_METRICS_TOKEN" Default="" Mode="" Description="Bearer token required on /metrics for remote Prometheus scrapers. Empty: only local scrapes are answered." Type="Variable" Display="advanced" Required="false" Mask="true"/>
+  <Config Name="Log level" Target="TASMOFLEET_LOG_LEVEL" Default="" Mode="" Description="debug, info, warn or error. Leave empty to choose it on the settings page; a value here locks it. Logs are JSON on stdout." Type="Variable" Display="advanced" Required="false" Mask="false"/>
+</Container>

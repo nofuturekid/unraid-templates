@@ -1,0 +1,7 @@
+<CommunityApplications>
+  <Profile>
+Unraid Community Applications templates for tasmofleet, a fleet manager for Tasmota devices (inventory, safe OTA firmware updates, backups, fleet policy). The templates are MIT licensed; the application itself is AGPL-3.0.
+  </Profile>
+  <Icon>https://raw.githubusercontent.com/nofuturekid/tasmofleet/main/assets/branding/icon-512.png</Icon>
+  <WebPage>https://github.com/nofuturekid/tasmofleet</WebPage>
+</CommunityApplications>
