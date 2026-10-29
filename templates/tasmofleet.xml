@@ -16,6 +16,21 @@
   <ExtraParams>--health-start-period=10s</ExtraParams>
   <PostArgs/>
   <Requires/>
+  <Screenshot>https://raw.githubusercontent.com/nofuturekid/tasmofleet/main/docs/media/dashboard.png</Screenshot>
+  <Screenshot>https://raw.githubusercontent.com/nofuturekid/tasmofleet/main/docs/media/devices.png</Screenshot>
+  <Screenshot>https://raw.githubusercontent.com/nofuturekid/tasmofleet/main/docs/media/transaction.png</Screenshot>
+  <Screenshot>https://raw.githubusercontent.com/nofuturekid/tasmofleet/main/docs/media/device-dark.png</Screenshot>
+  <Changes>
+### 2026-10-29 (0.16.2)
+- Device name: "Refresh identity" also reads the DeviceName; a name you set is never overwritten, the Identity card offers "Use device name" or "Keep" (#125)
+- Chip "Unknown" on ESP32-U4WDH boards fixed, updates no longer refused (#155)
+- Header version label on the same line as the brand name (#143)
+- Policy page: template cards no longer overlap in the empty state (#131)
+- Network scan: "Stop scan" works, found rows can be added while scanning (#144)
+
+### 2026-10-28 (0.16.1)
+- Empty template fields no longer stop the container (#148)
+  </Changes>
   <Config Name="Web UI (HTTPS)" Target="8443" Default="8443" Mode="tcp" Description="Web UI and API. Serves a self-signed certificate by default; put a reverse proxy in front for a trusted one (see the Trusted proxies variable)." Type="Port" Display="always" Required="true" Mask="false">8443</Config>
   <Config Name="Firmware server" Target="80" Default="8081" Mode="tcp" Description="Device-facing firmware server (plain HTTP; ESP8266 devices cannot use TLS). Tasmota devices download firmware from this port during an update. Choose any free host port that the devices can reach, and enter the resulting http://SERVER-IP:PORT/ URL as the firmware URL on the System settings page. Host port 80 is used by the Unraid web interface." Type="Port" Display="always" Required="true" Mask="false">8081</Config>
   <Config Name="Data" Target="/data" Default="/mnt/user/appdata/tasmofleet" Mode="rw" Description="Database, secret.key, firmware cache and backups. Back it up as a whole: without secret.key the stored device passwords cannot be decrypted. The container runs as UID/GID 65532 (not nobody 99:100): run 'chown -R 65532:65532 /mnt/user/appdata/tasmofleet' once if the folder is not writable." Type="Path" Display="always" Required="true" Mask="false">/mnt/user/appdata/tasmofleet</Config>
