@@ -21,6 +21,13 @@
   <Screenshot>https://raw.githubusercontent.com/nofuturekid/tasmofleet/main/docs/media/transaction.png</Screenshot>
   <Screenshot>https://raw.githubusercontent.com/nofuturekid/tasmofleet/main/docs/media/device-dark.png</Screenshot>
   <Changes>
+### 2026-10-29 (0.19.0)
+- Upgrade note: nothing to change in the template, no database migration. After policy rules are saved, 0.18 can no longer read them (keep a database copy if you might downgrade)
+- Policy page reworked: tiles, rule table with compliance bars, a page per rule, Deviating devices and History tabs (#197)
+- New rule from a template, any command, or copied from a device; 12 templates checked against Tasmota 16
+- Image also on Docker Hub as nofuturekid/tasmofleet (#165)
+- Fixes: restarting SetOptions in Make compliant (#196), backup migration leftovers (#205), umlauts in backup downloads (#208)
+
 ### 2026-10-29 (0.18.0)
 - Upgrade note: nothing to change in the template. Backups move to backups/&lt;hostname&gt;/ on the first start, automatically (checked by checksum, nothing deleted)
 - Push upload into safeboot for ESP32s with the safeboot layout; restarts back if anything fails (#30)
