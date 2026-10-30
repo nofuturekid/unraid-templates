@@ -12,7 +12,7 @@
   <Category>HomeAutomation: Tools:</Category>
   <WebUI>https://[IP]:[PORT:8080]/</WebUI>
   <TemplateURL>https://raw.githubusercontent.com/nofuturekid/unraid-templates/main/templates/tasmofleet.xml</TemplateURL>
-  <Icon>https://raw.githubusercontent.com/nofuturekid/tasmofleet/main/assets/branding/icon-512.png</Icon>
+  <Icon>https://raw.githubusercontent.com/nofuturekid/tasmofleet/main/assets/branding/unraid-icon.png</Icon>
   <ExtraParams>--health-start-period=10s</ExtraParams>
   <PostArgs/>
   <Requires/>
