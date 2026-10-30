@@ -1,8 +1,8 @@
 <?xml version="1.0"?>
 <Container version="2">
   <Name>TasmoFleet</Name>
-  <Repository>ghcr.io/nofuturekid/tasmofleet:latest</Repository>
-  <Registry>https://github.com/nofuturekid/tasmofleet/pkgs/container/tasmofleet</Registry>
+  <Repository>nofuturekid/tasmofleet:latest</Repository>
+  <Registry>https://hub.docker.com/r/nofuturekid/tasmofleet</Registry>
   <Network>bridge</Network>
   <Shell>sh</Shell>
   <Privileged>false</Privileged>
@@ -21,6 +21,13 @@
   <Screenshot>https://raw.githubusercontent.com/nofuturekid/tasmofleet/main/docs/media/transaction.png</Screenshot>
   <Screenshot>https://raw.githubusercontent.com/nofuturekid/tasmofleet/main/docs/media/device-dark.png</Screenshot>
   <Changes>
+### 2026-10-30 (0.20.0)
+- Upgrade note: database migrations 0035-0037 run automatically (a .pre-N copy is written first). The template now pulls from Docker Hub (nofuturekid/tasmofleet); the same image stays on ghcr.io, existing installs keep working either way
+- MQTT as a transport: devices TasmoFleet cannot reach over HTTP are managed over your broker (console, settings, Make compliant, firmware updates, config backups) (#79)
+- Device page shows how TasmoFleet reaches each device and why an action is unavailable
+- Device list: optional OTA URL and Group topic columns (#239)
+- Security: Status 0 confirmation could be bypassed with a Backlog-prefixed command; fixed
+- Fix: umlauts in the backup toast (#288)
 ### 2026-10-30 (0.19.2)
 - Security: golang.org/x/net 0.62.0 (scanner findings, not reachable from TasmoFleet)
 
