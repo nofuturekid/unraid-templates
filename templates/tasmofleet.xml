@@ -21,6 +21,9 @@
   <Screenshot>https://raw.githubusercontent.com/nofuturekid/tasmofleet/main/docs/media/transaction.png</Screenshot>
   <Screenshot>https://raw.githubusercontent.com/nofuturekid/tasmofleet/main/docs/media/device-dark.png</Screenshot>
   <Changes>
+### 2026-10-30 (0.19.1)
+- Backups: the manual backup cooldown is 1 minute and ends when the last backup of a device is deleted (#208)
+
 ### 2026-10-29 (0.19.0)
 - Upgrade note: nothing to change in the template, no database migration. After policy rules are saved, 0.18 can no longer read them (keep a database copy if you might downgrade)
 - Policy page reworked: tiles, rule table with compliance bars, a page per rule, Deviating devices and History tabs (#197)
