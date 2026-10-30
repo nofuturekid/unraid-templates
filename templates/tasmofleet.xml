@@ -21,6 +21,11 @@
   <Screenshot>https://raw.githubusercontent.com/nofuturekid/tasmofleet/main/docs/media/transaction.png</Screenshot>
   <Screenshot>https://raw.githubusercontent.com/nofuturekid/tasmofleet/main/docs/media/device-dark.png</Screenshot>
   <Changes>
+### 2026-10-31 (0.22.0 "Bell Rock")
+- Upgrade note: nothing to change in the template; database migration 0038 runs automatically (a .pre-38 copy is written first)
+- Settings page reworked: card grid, eight tabs, info buttons, one save bar (#275). Breaking: old Settings tab links open the first tab
+- Device page: Status 2 firmware fields with explanations, a warning when the settings text area is nearly full, hostname in the header, faster Settings tab (#289, #308, #290)
+- Backups show their file name; offline discovered devices move to the Discovered page (#290, #294)
 ### 2026-10-30 (0.21.0 "Tower of Hercules")
 - Upgrade note: nothing to change in the template, no database migration. Older patch images of 0.11 to 0.19 are removed; use the newest patch of a minor or :latest
 - Config restore over MQTT for devices TasmoFleet cannot reach over HTTP (#258)
