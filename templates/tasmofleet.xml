@@ -21,6 +21,10 @@
   <Screenshot>https://raw.githubusercontent.com/nofuturekid/tasmofleet/main/docs/media/transaction.png</Screenshot>
   <Screenshot>https://raw.githubusercontent.com/nofuturekid/tasmofleet/main/docs/media/device-dark.png</Screenshot>
   <Changes>
+### 2026-10-30 (0.21.0 "Tower of Hercules")
+- Upgrade note: nothing to change in the template, no database migration. Older patch images of 0.11 to 0.19 are removed; use the newest patch of a minor or :latest
+- Config restore over MQTT for devices TasmoFleet cannot reach over HTTP (#258)
+- Releases are named after lighthouses
 ### 2026-10-30 (0.20.0)
 - Upgrade note: database migrations 0035-0037 run automatically (a .pre-N copy is written first). The template now pulls from Docker Hub (nofuturekid/tasmofleet); the same image stays on ghcr.io, existing installs keep working either way
 - MQTT as a transport: devices TasmoFleet cannot reach over HTTP are managed over your broker (console, settings, Make compliant, firmware updates, config backups) (#79)
