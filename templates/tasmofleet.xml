@@ -8,7 +8,7 @@
   <Privileged>false</Privileged>
   <Support>https://forums.unraid.net/topic/201022-support-tasmofleet/</Support>
   <Project>https://github.com/nofuturekid/tasmofleet</Project>
-  <Overview>Fleet manager for Tasmota devices, an alternative to TasmoAdmin (imports its device list). Highlights: configuration backups (scheduled and on demand, diff, one-click restore, also onto a replacement device) and a settings policy (define the settings every device should have, see compliance, fix deviations in one go). Also: safe over-the-air firmware updates in bulk (image header and chip-family checks), live status, bulk commands, single sign-on and a Prometheus metrics endpoint. Devices fetch firmware over plain HTTP from a dedicated port of this container. MQTT is optional; every feature also works over HTTP alone. Network ranges, MQTT, firmware sources, backups and single sign-on are configured in the web UI after the first sign-in. The first admin password is written to initial-admin-password in the appdata folder. Ports are set only in the port mappings (the UI is always container port 8080); every variable is described at https://github.com/nofuturekid/tasmofleet/blob/main/docs/configuration.md. Pre-1.0: breaking changes are to be expected; read the changes below or the release notes before updating.</Overview>
+  <Overview>TasmoFleet is a fleet manager for Tasmota devices and an alternative to TasmoAdmin (it imports its device list).[br][br]Highlights:[br]- Fleet overview with live status, bulk commands and a dashboard that lists what needs attention.[br]- Firmware updates over the air with a safe rollout: image header and chip-family checks, one batch at a time, per-device progress.[br]- Policy rules with a command catalogue: define the settings every device should have, see compliance, fix deviations in one go.[br]- Config backups (scheduled or on demand, diff, one-click restore, also onto a replacement device) and snapshots of TasmoFleet's own database.[br]- Notifications by webhook (e.g. Home Assistant) or email when an update finishes or a scheduled backup or snapshot fails.[br]- Per-device stability: restart reasons, boot loops and weak Wi-Fi at a glance.[br][br]MQTT is optional; every feature also works over HTTP alone. Devices fetch firmware over plain HTTP from a dedicated port of this container.[br][br]Settings live in the web UI (System, Settings) after the first sign-in; environment variables are only for bootstrap. The first admin password is written to initial-admin-password in the appdata folder. All variables: https://github.com/nofuturekid/tasmofleet/blob/main/docs/configuration.md[br][br]Pre-1.0: breaking changes are to be expected; read the changes below or the release notes before updating.</Overview>
   <Category>HomeAutomation: Tools:</Category>
   <WebUI>https://[IP]:[PORT:8080]/</WebUI>
   <TemplateURL>https://raw.githubusercontent.com/nofuturekid/unraid-templates/main/templates/tasmofleet.xml</TemplateURL>
@@ -18,9 +18,14 @@
   <Requires/>
   <Screenshot>https://raw.githubusercontent.com/nofuturekid/tasmofleet/main/docs/media/dashboard.png</Screenshot>
   <Screenshot>https://raw.githubusercontent.com/nofuturekid/tasmofleet/main/docs/media/devices.png</Screenshot>
-  <Screenshot>https://raw.githubusercontent.com/nofuturekid/tasmofleet/main/docs/media/transaction.png</Screenshot>
-  <Screenshot>https://raw.githubusercontent.com/nofuturekid/tasmofleet/main/docs/media/device-dark.png</Screenshot>
+  <Screenshot>https://raw.githubusercontent.com/nofuturekid/tasmofleet/main/docs/media/device-settings.png</Screenshot>
+  <Screenshot>https://raw.githubusercontent.com/nofuturekid/tasmofleet/main/docs/media/policy-editor.png</Screenshot>
   <Changes>
+### 2026-10-31 (0.25.0 "Cape Point")
+- Nothing to change in the template; database migration 0041 runs automatically
+- Notifications by webhook (Home Assistant preset) or e-mail (#249)
+- Stability per device: restart reasons, boot loops, weak Wi-Fi (#325)
+- Firmware cache keeps 3 releases by default (#252); card stacks without gaps on every page (#391, #395); new screenshots (#397)
 ### 2026-10-31 (0.24.0 "Hook Head")
 - Nothing to change in the template; database migration 0040 runs automatically
 - TasmoFleet backs up itself: database snapshot download and scheduled snapshots (#301)
