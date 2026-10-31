@@ -21,6 +21,9 @@
   <Screenshot>https://raw.githubusercontent.com/nofuturekid/tasmofleet/main/docs/media/transaction.png</Screenshot>
   <Screenshot>https://raw.githubusercontent.com/nofuturekid/tasmofleet/main/docs/media/device-dark.png</Screenshot>
   <Changes>
+### 2026-10-31 (0.22.1 "Bell Rock")
+- Nothing to change in the template, no database migration
+- Settings polish: Discovery tab with MQTT discovery and the network scan, layout as in the approved design, Backups storage card back (#333-#338). Old "Discovery scan" tab links open the first tab
 ### 2026-10-31 (0.22.0 "Bell Rock")
 - Upgrade note: nothing to change in the template; database migration 0038 runs automatically (a .pre-38 copy is written first)
 - Settings page reworked: card grid, eight tabs, info buttons, one save bar (#275). Breaking: old Settings tab links open the first tab
