@@ -21,6 +21,11 @@
   <Screenshot>https://raw.githubusercontent.com/nofuturekid/tasmofleet/main/docs/media/transaction.png</Screenshot>
   <Screenshot>https://raw.githubusercontent.com/nofuturekid/tasmofleet/main/docs/media/device-dark.png</Screenshot>
   <Changes>
+### 2026-10-31 (0.23.0 "Cape Hatteras")
+- Nothing to change in the template; database migration 0039 runs automatically
+- Status bar at the bottom of every page (live, broker, running jobs, last backup, version) (#307)
+- Policy editor uses the Tasmota command catalogue: suggestions, index ranges, value kinds, help, version warnings (#269); "Applies to" as an open section with device search (#235)
+- Console command history (#321), remembered ESP32-S2 build (#186), Upgrade/OtaUrl refused during an update job (#240)
 ### 2026-10-31 (0.22.1 "Bell Rock")
 - Nothing to change in the template, no database migration
 - Settings polish: Discovery tab with MQTT discovery and the network scan, layout as in the approved design, Backups storage card back (#333-#338). Old "Discovery scan" tab links open the first tab
