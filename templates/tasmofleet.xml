@@ -21,6 +21,10 @@
   <Screenshot>https://raw.githubusercontent.com/nofuturekid/tasmofleet/main/docs/media/transaction.png</Screenshot>
   <Screenshot>https://raw.githubusercontent.com/nofuturekid/tasmofleet/main/docs/media/device-dark.png</Screenshot>
   <Changes>
+### 2026-10-31 (0.23.1 "Cape Hatteras")
+- Nothing to change in the template, no database migration
+- Image now also for linux/arm64 (Raspberry Pi 4/5), backup decoder included (#354, #211)
+- Policy rules on commands that act when sent bare (e.g. RC522Reset) are refused (#358); Settings unsaved dot no longer moves the row (#362)
 ### 2026-10-31 (0.23.0 "Cape Hatteras")
 - Nothing to change in the template; database migration 0039 runs automatically
 - Status bar at the bottom of every page (live, broker, running jobs, last backup, version) (#307)
