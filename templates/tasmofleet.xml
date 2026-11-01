@@ -16,11 +16,16 @@
   <ExtraParams>--health-start-period=10s</ExtraParams>
   <PostArgs/>
   <Requires/>
-  <Screenshot>https://raw.githubusercontent.com/nofuturekid/tasmofleet/main/docs/media/dashboard.png</Screenshot>
-  <Screenshot>https://raw.githubusercontent.com/nofuturekid/tasmofleet/main/docs/media/devices.png</Screenshot>
-  <Screenshot>https://raw.githubusercontent.com/nofuturekid/tasmofleet/main/docs/media/device-settings.png</Screenshot>
-  <Screenshot>https://raw.githubusercontent.com/nofuturekid/tasmofleet/main/docs/media/policy-editor.png</Screenshot>
+  <Screenshot>https://raw.githubusercontent.com/nofuturekid/tasmofleet/v0.26.0/docs/media/dashboard.png</Screenshot>
+  <Screenshot>https://raw.githubusercontent.com/nofuturekid/tasmofleet/v0.26.0/docs/media/devices.png</Screenshot>
+  <Screenshot>https://raw.githubusercontent.com/nofuturekid/tasmofleet/v0.26.0/docs/media/device-settings.png</Screenshot>
+  <Screenshot>https://raw.githubusercontent.com/nofuturekid/tasmofleet/v0.26.0/docs/media/policy-editor.png</Screenshot>
   <Changes>
+### 2026-11-01 (0.26.0 "Skerryvore")
+- Nothing to change in the template, no database migration
+- Backups and restore include the flash files of an ESP32 (Berry scripts, folders, tlskey) (#324)
+- Restore over HTTP now works on official Tasmota builds; it did not before (#430). First-run setup over plain HTTP fixed (#429)
+- "No backup" filter chip behind the Devices-without-backup tile (#381); status bar reads partly failed backup runs correctly (#406); sort arrows and Action sorting fixed (#407); screenshots are tag-pinned (#423)
 ### 2026-10-31 (0.25.0 "Cape Point")
 - Nothing to change in the template; database migration 0041 runs automatically
 - Notifications by webhook (Home Assistant preset) or e-mail (#249)
