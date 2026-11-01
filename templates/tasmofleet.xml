@@ -16,11 +16,16 @@
   <ExtraParams>--health-start-period=10s</ExtraParams>
   <PostArgs/>
   <Requires/>
-  <Screenshot>https://raw.githubusercontent.com/nofuturekid/tasmofleet/v0.26.0/docs/media/dashboard.png</Screenshot>
-  <Screenshot>https://raw.githubusercontent.com/nofuturekid/tasmofleet/v0.26.0/docs/media/devices.png</Screenshot>
-  <Screenshot>https://raw.githubusercontent.com/nofuturekid/tasmofleet/v0.26.0/docs/media/device-settings.png</Screenshot>
-  <Screenshot>https://raw.githubusercontent.com/nofuturekid/tasmofleet/v0.26.0/docs/media/policy-editor.png</Screenshot>
+  <Screenshot>https://raw.githubusercontent.com/nofuturekid/tasmofleet/v0.27.0/docs/media/dashboard.png</Screenshot>
+  <Screenshot>https://raw.githubusercontent.com/nofuturekid/tasmofleet/v0.27.0/docs/media/devices.png</Screenshot>
+  <Screenshot>https://raw.githubusercontent.com/nofuturekid/tasmofleet/v0.27.0/docs/media/device-settings.png</Screenshot>
+  <Screenshot>https://raw.githubusercontent.com/nofuturekid/tasmofleet/v0.27.0/docs/media/policy-editor.png</Screenshot>
   <Changes>
+### 2026-11-01 (0.27.0 "Cordouan")
+- Nothing to change in the template, no database migration
+- GPIO templates tab on the Policy page: compare devices by template, apply one to several devices as a transaction, admin only, backup first (#327)
+- Devices menu is now List, Policy, Add (one Add page); database snapshots moved to System, Snapshots; the old /discovery and /import/tasmoadmin pages are gone, update bookmarks (#410, #440)
+- Cancel and retry of template transactions is admin-only; commit shown with 7 characters (#436); screenshots are tag-pinned
 ### 2026-11-01 (0.26.1 "Skerryvore")
 - Nothing to change in the template, no database migration
 - Device Overview arranges its cards in two column stacks (#421, #420, #422); the Reachability tile reads the real HTTP state (#416)
