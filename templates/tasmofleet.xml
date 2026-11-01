@@ -21,6 +21,10 @@
   <Screenshot>https://raw.githubusercontent.com/nofuturekid/tasmofleet/v0.26.0/docs/media/device-settings.png</Screenshot>
   <Screenshot>https://raw.githubusercontent.com/nofuturekid/tasmofleet/v0.26.0/docs/media/policy-editor.png</Screenshot>
   <Changes>
+### 2026-11-01 (0.26.1 "Skerryvore")
+- Nothing to change in the template, no database migration
+- Device Overview arranges its cards in two column stacks (#421, #420, #422); the Reachability tile reads the real HTTP state (#416)
+- Devices identified before 0.22.0 get their Status 2 facts (core, SDK, CPU frequency, build date) read automatically (#417)
 ### 2026-11-01 (0.26.0 "Skerryvore")
 - Nothing to change in the template, no database migration
 - Backups and restore include the flash files of an ESP32 (Berry scripts, folders, tlskey) (#324)
