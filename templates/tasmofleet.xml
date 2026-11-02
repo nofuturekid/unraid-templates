@@ -21,6 +21,11 @@
   <Screenshot>https://raw.githubusercontent.com/nofuturekid/tasmofleet/v0.27.0/docs/media/device-settings.png</Screenshot>
   <Screenshot>https://raw.githubusercontent.com/nofuturekid/tasmofleet/v0.27.0/docs/media/policy-editor.png</Screenshot>
   <Changes>
+### 2026-11-02 (0.27.1 "Cordouan")
+- Nothing to change in the template, no database migration
+- ESP32-H2 is a known chip family (own builds over Ethernet can be uploaded as custom images); ESP8685 and ESP8686 are recognised as ESP32-C3 (#470)
+- Settings, Notifications: "Send test" follows the switch of its channel (#471)
+- Four low-severity security fixes: live event stream, retry confirmation, job cancel and network scan stream for demoted admins (see the GitHub security advisories)
 ### 2026-11-01 (0.27.0 "Cordouan")
 - Nothing to change in the template, no database migration
 - GPIO templates tab on the Policy page: compare devices by template, apply one to several devices as a transaction, admin only, backup first (#327)
