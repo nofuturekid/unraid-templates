@@ -21,6 +21,11 @@
   <Screenshot>https://raw.githubusercontent.com/nofuturekid/tasmofleet/v0.27.0/docs/media/device-settings.png</Screenshot>
   <Screenshot>https://raw.githubusercontent.com/nofuturekid/tasmofleet/v0.27.0/docs/media/policy-editor.png</Screenshot>
   <Changes>
+### 2026-11-02 (0.27.2 "Cordouan")
+- Nothing to change in the template, no database migration
+- Firmware language builds: Catalan, Czech, Greek, Swedish, Vietnamese and Chinese devices now get their correct build (AD, CZ, GR, SE, VN, CN, TW); the two Portuguese builds are told apart via Status 4; Lithuanian is offered (#509)
+- Updates: a device that is back but whose firmware cannot be read no longer blocks its update slot for ever (#493); a busy firmware cache no longer fails an update step (#495); a device flashed by another tool is held against new updates until it restarted (#504)
+- Saving a device edit and the MQTT report of the same device no longer overwrite each other (#502); MQTT UPGRADE and OFF reports use one bounded worker (#507)
 ### 2026-11-02 (0.27.1 "Cordouan")
 - Nothing to change in the template, no database migration
 - ESP32-H2 is a known chip family (own builds over Ethernet can be uploaded as custom images); ESP8685 and ESP8686 are recognised as ESP32-C3 (#470)
