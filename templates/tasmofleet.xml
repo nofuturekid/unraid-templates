@@ -21,6 +21,11 @@
   <Screenshot>https://raw.githubusercontent.com/nofuturekid/tasmofleet/v0.27.0/docs/media/device-settings.png</Screenshot>
   <Screenshot>https://raw.githubusercontent.com/nofuturekid/tasmofleet/v0.27.0/docs/media/policy-editor.png</Screenshot>
   <Changes>
+### 2026-11-02 (0.27.3 "Cordouan")
+- Nothing to change in the template, no database migration. Metrics: tasmofleet_backup_last_success_timestamp_seconds has a new id label next to device (#499); queries that join or aggregate it by the exact label set must add id
+- Backups: the backup you restore can no longer be deleted by the safety backup's retention (#494); a failed backup run stores nothing (#496); backup files are flushed into their directory before they are indexed (#506)
+- A POWER OFF report during an update is never dropped while TasmoFleet runs, so "Power after update" no longer switches a relay back on that you switched off (#534)
+- Make compliant saves the chunks already sent when a later one fails (#503); the audit log keeps a change when the browser disconnects right after submitting it (#505); the device list shows a relay's new state after switching it (#463)
 ### 2026-11-02 (0.27.2 "Cordouan")
 - Nothing to change in the template, no database migration
 - Firmware language builds: Catalan, Czech, Greek, Swedish, Vietnamese and Chinese devices now get their correct build (AD, CZ, GR, SE, VN, CN, TW); the two Portuguese builds are told apart via Status 4; Lithuanian is offered (#509)
