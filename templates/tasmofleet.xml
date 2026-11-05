@@ -16,11 +16,15 @@
   <ExtraParams>--health-start-period=10s</ExtraParams>
   <PostArgs/>
   <Requires/>
-  <Screenshot>https://raw.githubusercontent.com/nofuturekid/tasmofleet/v0.29.0/docs/media/dashboard.png</Screenshot>
-  <Screenshot>https://raw.githubusercontent.com/nofuturekid/tasmofleet/v0.29.0/docs/media/devices.png</Screenshot>
-  <Screenshot>https://raw.githubusercontent.com/nofuturekid/tasmofleet/v0.29.0/docs/media/device-settings.png</Screenshot>
-  <Screenshot>https://raw.githubusercontent.com/nofuturekid/tasmofleet/v0.29.0/docs/media/policy-editor.png</Screenshot>
+  <Screenshot>https://raw.githubusercontent.com/nofuturekid/tasmofleet/v0.29.1/docs/media/dashboard.png</Screenshot>
+  <Screenshot>https://raw.githubusercontent.com/nofuturekid/tasmofleet/v0.29.1/docs/media/devices.png</Screenshot>
+  <Screenshot>https://raw.githubusercontent.com/nofuturekid/tasmofleet/v0.29.1/docs/media/device-settings.png</Screenshot>
+  <Screenshot>https://raw.githubusercontent.com/nofuturekid/tasmofleet/v0.29.1/docs/media/policy-editor.png</Screenshot>
   <Changes>
+### 2026-11-05 (0.29.1 "Portland Head")
+- Nothing to change in the template, no database migration
+- Tasmota builds with a localized web UI are identified and can be updated (#468); an ESP32 file restore on them no longer reports a lost file (#618)
+- The device's broker is kept current, and devices on TasmoFleet's broker under another name (core-mosquitto) no longer show "Other broker" (#598, #597)
 ### 2026-11-05 (0.29.0 "Portland Head")
 - Nothing to change in the template. Database migrations 0043 and 0044 run automatically
 - New page Devices, Backups (last run, failed and skipped devices, each device's backups, storage, schedule); Settings, Backups moved there, a bookmark to the old tab needs /devices/backups (#409)
