@@ -16,11 +16,16 @@
   <ExtraParams>--health-start-period=10s</ExtraParams>
   <PostArgs/>
   <Requires/>
-  <Screenshot>https://raw.githubusercontent.com/nofuturekid/tasmofleet/v0.28.0/docs/media/dashboard.png</Screenshot>
-  <Screenshot>https://raw.githubusercontent.com/nofuturekid/tasmofleet/v0.28.0/docs/media/devices.png</Screenshot>
-  <Screenshot>https://raw.githubusercontent.com/nofuturekid/tasmofleet/v0.28.0/docs/media/device-settings.png</Screenshot>
-  <Screenshot>https://raw.githubusercontent.com/nofuturekid/tasmofleet/v0.28.0/docs/media/policy-editor.png</Screenshot>
+  <Screenshot>https://raw.githubusercontent.com/nofuturekid/tasmofleet/v0.29.0/docs/media/dashboard.png</Screenshot>
+  <Screenshot>https://raw.githubusercontent.com/nofuturekid/tasmofleet/v0.29.0/docs/media/devices.png</Screenshot>
+  <Screenshot>https://raw.githubusercontent.com/nofuturekid/tasmofleet/v0.29.0/docs/media/device-settings.png</Screenshot>
+  <Screenshot>https://raw.githubusercontent.com/nofuturekid/tasmofleet/v0.29.0/docs/media/policy-editor.png</Screenshot>
   <Changes>
+### 2026-11-05 (0.29.0 "Portland Head")
+- Nothing to change in the template. Database migrations 0043 and 0044 run automatically
+- New page Devices, Backups (last run, failed and skipped devices, each device's backups, storage, schedule); Settings, Backups moved there, a bookmark to the old tab needs /devices/backups (#409)
+- Scheduled backups skip offline or busy devices instead of counting them as failed (#409); cards use the page width on Updates, Firmware, device and system pages (#419)
+- Other-broker hint after a broker move (#580); times no longer flash on live pages (#594); the notification preview shows a link only when one is sent (#579)
 ### 2026-11-05 (0.28.0 "Cape Byron")
 - Upgrade: the power restore after updates is gone, TasmoFleet no longer switches relays back on. Set SetOption0 1, PowerOnState 3 and SaveData 1 on devices that should keep their state (a Policy rule plus Make compliant does it) (#551)
 - Upgrade: ntfy or Gotify users set the webhook Format in Settings, Notifications (#469). Database migration 0042 runs automatically; nothing to change in the template
