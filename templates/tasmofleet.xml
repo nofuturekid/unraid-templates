@@ -16,11 +16,14 @@
   <ExtraParams>--health-start-period=10s</ExtraParams>
   <PostArgs/>
   <Requires/>
-  <Screenshot>https://raw.githubusercontent.com/nofuturekid/tasmofleet/v0.30.0/docs/media/dashboard.png</Screenshot>
-  <Screenshot>https://raw.githubusercontent.com/nofuturekid/tasmofleet/v0.30.0/docs/media/devices.png</Screenshot>
-  <Screenshot>https://raw.githubusercontent.com/nofuturekid/tasmofleet/v0.30.0/docs/media/device-settings.png</Screenshot>
-  <Screenshot>https://raw.githubusercontent.com/nofuturekid/tasmofleet/v0.30.0/docs/media/policy-editor.png</Screenshot>
+  <Screenshot>https://raw.githubusercontent.com/nofuturekid/tasmofleet/v0.30.1/docs/media/dashboard.png</Screenshot>
+  <Screenshot>https://raw.githubusercontent.com/nofuturekid/tasmofleet/v0.30.1/docs/media/devices.png</Screenshot>
+  <Screenshot>https://raw.githubusercontent.com/nofuturekid/tasmofleet/v0.30.1/docs/media/device-settings.png</Screenshot>
+  <Screenshot>https://raw.githubusercontent.com/nofuturekid/tasmofleet/v0.30.1/docs/media/policy-editor.png</Screenshot>
   <Changes>
+### 2026-11-05 (0.30.1 "Eddystone")
+- Nothing to change in the template, no database migration
+- Times no longer show in the server's format for a moment while a page loads (#635); devices with SetOption4 1 are read over MQTT without an 8 s wait (#632)
 ### 2026-11-05 (0.30.0 "Eddystone")
 - Nothing to change in the template, no database migration
 - Reads go over MQTT first for devices on TasmoFleet's broker (#456); a device with the HTTP API switched off is no longer shown as offline (#447)
