@@ -21,6 +21,10 @@
   <Screenshot>https://raw.githubusercontent.com/nofuturekid/tasmofleet/v0.27.0/docs/media/device-settings.png</Screenshot>
   <Screenshot>https://raw.githubusercontent.com/nofuturekid/tasmofleet/v0.27.0/docs/media/policy-editor.png</Screenshot>
   <Changes>
+### 2026-11-05 (0.27.4 "Cordouan")
+- Nothing to change in the template, no database migration
+- Make compliant waits for Tasmota's Backlog before judging the read-back, and the trailing save queues behind the lines (#559)
+- The Template command's name and base are encoded as JSON (#561)
 ### 2026-11-02 (0.27.3 "Cordouan")
 - Nothing to change in the template, no database migration. Metrics: tasmofleet_backup_last_success_timestamp_seconds has a new id label next to device (#499); queries that join or aggregate it by the exact label set must add id
 - Backups: the backup you restore can no longer be deleted by the safety backup's retention (#494); a failed backup run stores nothing (#496); backup files are flushed into their directory before they are indexed (#506)
