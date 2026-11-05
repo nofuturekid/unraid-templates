@@ -16,11 +16,15 @@
   <ExtraParams>--health-start-period=10s</ExtraParams>
   <PostArgs/>
   <Requires/>
-  <Screenshot>https://raw.githubusercontent.com/nofuturekid/tasmofleet/v0.29.1/docs/media/dashboard.png</Screenshot>
-  <Screenshot>https://raw.githubusercontent.com/nofuturekid/tasmofleet/v0.29.1/docs/media/devices.png</Screenshot>
-  <Screenshot>https://raw.githubusercontent.com/nofuturekid/tasmofleet/v0.29.1/docs/media/device-settings.png</Screenshot>
-  <Screenshot>https://raw.githubusercontent.com/nofuturekid/tasmofleet/v0.29.1/docs/media/policy-editor.png</Screenshot>
+  <Screenshot>https://raw.githubusercontent.com/nofuturekid/tasmofleet/v0.30.0/docs/media/dashboard.png</Screenshot>
+  <Screenshot>https://raw.githubusercontent.com/nofuturekid/tasmofleet/v0.30.0/docs/media/devices.png</Screenshot>
+  <Screenshot>https://raw.githubusercontent.com/nofuturekid/tasmofleet/v0.30.0/docs/media/device-settings.png</Screenshot>
+  <Screenshot>https://raw.githubusercontent.com/nofuturekid/tasmofleet/v0.30.0/docs/media/policy-editor.png</Screenshot>
   <Changes>
+### 2026-11-05 (0.30.0 "Eddystone")
+- Nothing to change in the template, no database migration
+- Reads go over MQTT first for devices on TasmoFleet's broker (#456); a device with the HTTP API switched off is no longer shown as offline (#447)
+- Every action shows at once that it is running (#538); Reset to default shows the default at once (#623); configuration tables stack on tablets (#592)
 ### 2026-11-05 (0.29.1 "Portland Head")
 - Nothing to change in the template, no database migration
 - Tasmota builds with a localized web UI are identified and can be updated (#468); an ESP32 file restore on them no longer reports a lost file (#618)
