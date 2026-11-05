@@ -16,11 +16,16 @@
   <ExtraParams>--health-start-period=10s</ExtraParams>
   <PostArgs/>
   <Requires/>
-  <Screenshot>https://raw.githubusercontent.com/nofuturekid/tasmofleet/v0.27.0/docs/media/dashboard.png</Screenshot>
-  <Screenshot>https://raw.githubusercontent.com/nofuturekid/tasmofleet/v0.27.0/docs/media/devices.png</Screenshot>
-  <Screenshot>https://raw.githubusercontent.com/nofuturekid/tasmofleet/v0.27.0/docs/media/device-settings.png</Screenshot>
-  <Screenshot>https://raw.githubusercontent.com/nofuturekid/tasmofleet/v0.27.0/docs/media/policy-editor.png</Screenshot>
+  <Screenshot>https://raw.githubusercontent.com/nofuturekid/tasmofleet/v0.28.0/docs/media/dashboard.png</Screenshot>
+  <Screenshot>https://raw.githubusercontent.com/nofuturekid/tasmofleet/v0.28.0/docs/media/devices.png</Screenshot>
+  <Screenshot>https://raw.githubusercontent.com/nofuturekid/tasmofleet/v0.28.0/docs/media/device-settings.png</Screenshot>
+  <Screenshot>https://raw.githubusercontent.com/nofuturekid/tasmofleet/v0.28.0/docs/media/policy-editor.png</Screenshot>
   <Changes>
+### 2026-11-05 (0.28.0 "Cape Byron")
+- Upgrade: the power restore after updates is gone, TasmoFleet no longer switches relays back on. Set SetOption0 1, PowerOnState 3 and SaveData 1 on devices that should keep their state (a Policy rule plus Make compliant does it) (#551)
+- Upgrade: ntfy or Gotify users set the webhook Format in Settings, Notifications (#469). Database migration 0042 runs automatically; nothing to change in the template
+- Dashboard "No backup" tile (#438); the MQTT broker is shown only when the device uses another broker (#441); safeboot and minimal devices are detected and shown as Not judged (#558, #560)
+- A device cannot be deleted while a job runs on it (#466); Drift ignores Status 10 sensor readings (#446)
 ### 2026-11-05 (0.27.4 "Cordouan")
 - Nothing to change in the template, no database migration
 - Make compliant waits for Tasmota's Backlog before judging the read-back, and the trailing save queues behind the lines (#559)
