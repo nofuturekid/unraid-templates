@@ -16,11 +16,15 @@
   <ExtraParams>--health-start-period=10s</ExtraParams>
   <PostArgs/>
   <Requires/>
-  <Screenshot>https://raw.githubusercontent.com/nofuturekid/tasmofleet/v0.32.0/docs/media/dashboard.png</Screenshot>
-  <Screenshot>https://raw.githubusercontent.com/nofuturekid/tasmofleet/v0.32.0/docs/media/devices.png</Screenshot>
-  <Screenshot>https://raw.githubusercontent.com/nofuturekid/tasmofleet/v0.32.0/docs/media/device-settings.png</Screenshot>
-  <Screenshot>https://raw.githubusercontent.com/nofuturekid/tasmofleet/v0.32.0/docs/media/policy-editor.png</Screenshot>
+  <Screenshot>https://raw.githubusercontent.com/nofuturekid/tasmofleet/v0.33.0/docs/media/dashboard.png</Screenshot>
+  <Screenshot>https://raw.githubusercontent.com/nofuturekid/tasmofleet/v0.33.0/docs/media/devices.png</Screenshot>
+  <Screenshot>https://raw.githubusercontent.com/nofuturekid/tasmofleet/v0.33.0/docs/media/device-settings.png</Screenshot>
+  <Screenshot>https://raw.githubusercontent.com/nofuturekid/tasmofleet/v0.33.0/docs/media/policy-editor.png</Screenshot>
   <Changes>
+### 2026-11-06 (0.33.0 "Dondra Head")
+- Nothing to change in the template. Database migration 0045 runs automatically: a backup interval becomes every day at 03:00; choose days and time on Devices, Backups
+- Device backups on chosen weekdays at a time of day, no backup at start (#601, #612); browser notifications for admins (#540)
+- Quieter device health after a start or reboot (#652); rule draft and docs fixes (#660, #501)
 ### 2026-11-06 (0.32.0 "Fastnet")
 - Nothing to change in the template, no database migration
 - Device data stays current on its own: read once a day and after a device restarts (#600)
