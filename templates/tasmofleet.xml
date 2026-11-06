@@ -16,11 +16,15 @@
   <ExtraParams>--health-start-period=10s</ExtraParams>
   <PostArgs/>
   <Requires/>
-  <Screenshot>https://raw.githubusercontent.com/nofuturekid/tasmofleet/v0.31.0/docs/media/dashboard.png</Screenshot>
-  <Screenshot>https://raw.githubusercontent.com/nofuturekid/tasmofleet/v0.31.0/docs/media/devices.png</Screenshot>
-  <Screenshot>https://raw.githubusercontent.com/nofuturekid/tasmofleet/v0.31.0/docs/media/device-settings.png</Screenshot>
-  <Screenshot>https://raw.githubusercontent.com/nofuturekid/tasmofleet/v0.31.0/docs/media/policy-editor.png</Screenshot>
+  <Screenshot>https://raw.githubusercontent.com/nofuturekid/tasmofleet/v0.32.0/docs/media/dashboard.png</Screenshot>
+  <Screenshot>https://raw.githubusercontent.com/nofuturekid/tasmofleet/v0.32.0/docs/media/devices.png</Screenshot>
+  <Screenshot>https://raw.githubusercontent.com/nofuturekid/tasmofleet/v0.32.0/docs/media/device-settings.png</Screenshot>
+  <Screenshot>https://raw.githubusercontent.com/nofuturekid/tasmofleet/v0.32.0/docs/media/policy-editor.png</Screenshot>
   <Changes>
+### 2026-11-06 (0.32.0 "Fastnet")
+- Nothing to change in the template, no database migration
+- Device data stays current on its own: read once a day and after a device restarts (#600)
+- A device with the HTTP API off is refused up front by every action (#645); quick shutdown with exit 0 (#497); rule draft and import fixes (#512, #500)
 ### 2026-11-05 (0.31.0 "Cape Spear")
 - Nothing to change in the template, no database migration
 - Settings and GPIO templates show the last values read at once, with their age (#599); a device with MQTT off or a retained Offline will is shown online when HTTP answers (#619, #447)
