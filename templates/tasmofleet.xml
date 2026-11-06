@@ -7,20 +7,23 @@
   <Shell>sh</Shell>
   <Privileged>false</Privileged>
   <Support>https://forums.unraid.net/topic/201022-support-tasmofleet/</Support>
-  <Project>https://github.com/nofuturekid/tasmofleet</Project>
-  <Overview>TasmoFleet is a fleet manager for Tasmota devices and an alternative to TasmoAdmin (it imports its device list).[br][br]Highlights:[br]- Fleet overview with live status, bulk commands and a dashboard that lists what needs attention.[br]- Firmware updates over the air with a safe rollout: image header and chip-family checks, one batch at a time, per-device progress.[br]- Policy rules with a command catalogue: define the settings every device should have, see compliance, fix deviations in one go.[br]- Config backups (scheduled or on demand, diff, one-click restore, also onto a replacement device) and snapshots of TasmoFleet's own database.[br]- Notifications by webhook (e.g. Home Assistant) or email when an update finishes or a scheduled backup or snapshot fails.[br]- Per-device stability: restart reasons, boot loops and weak Wi-Fi at a glance.[br][br]MQTT is optional; every feature also works over HTTP alone. Devices fetch firmware over plain HTTP from a dedicated port of this container.[br][br]Settings live in the web UI (System, Settings) after the first sign-in; environment variables are only for bootstrap. The first admin password is written to initial-admin-password in the appdata folder. All variables: https://github.com/nofuturekid/tasmofleet/blob/main/docs/configuration.md[br][br]Pre-1.0: breaking changes are to be expected; read the changes below or the release notes before updating.</Overview>
+  <Project>https://github.com/hellwand/tasmofleet</Project>
+  <Overview>TasmoFleet is a fleet manager for Tasmota devices and an alternative to TasmoAdmin (it imports its device list).[br][br]Highlights:[br]- Fleet overview with live status, bulk commands and a dashboard that lists what needs attention.[br]- Firmware updates over the air with a safe rollout: image header and chip-family checks, one batch at a time, per-device progress.[br]- Policy rules with a command catalogue: define the settings every device should have, see compliance, fix deviations in one go.[br]- Config backups (scheduled or on demand, diff, one-click restore, also onto a replacement device) and snapshots of TasmoFleet's own database.[br]- Notifications by webhook (e.g. Home Assistant) or email when an update finishes or a scheduled backup or snapshot fails.[br]- Per-device stability: restart reasons, boot loops and weak Wi-Fi at a glance.[br][br]MQTT is optional; every feature also works over HTTP alone. Devices fetch firmware over plain HTTP from a dedicated port of this container.[br][br]Settings live in the web UI (System, Settings) after the first sign-in; environment variables are only for bootstrap. The first admin password is written to initial-admin-password in the appdata folder. All variables: https://github.com/hellwand/tasmofleet/blob/main/docs/configuration.md[br][br]Pre-1.0: breaking changes are to be expected; read the changes below or the release notes before updating.</Overview>
   <Category>HomeAutomation: Tools:</Category>
   <WebUI>https://[IP]:[PORT:8080]/</WebUI>
   <TemplateURL>https://raw.githubusercontent.com/nofuturekid/unraid-templates/main/templates/tasmofleet.xml</TemplateURL>
-  <Icon>https://raw.githubusercontent.com/nofuturekid/tasmofleet/main/assets/branding/unraid-icon.png</Icon>
+  <Icon>https://raw.githubusercontent.com/hellwand/tasmofleet/main/assets/branding/unraid-icon.png</Icon>
   <ExtraParams>--health-start-period=10s</ExtraParams>
   <PostArgs/>
   <Requires/>
-  <Screenshot>https://raw.githubusercontent.com/nofuturekid/tasmofleet/v0.34.0/docs/media/dashboard.png</Screenshot>
-  <Screenshot>https://raw.githubusercontent.com/nofuturekid/tasmofleet/v0.34.0/docs/media/devices.png</Screenshot>
-  <Screenshot>https://raw.githubusercontent.com/nofuturekid/tasmofleet/v0.34.0/docs/media/device-settings.png</Screenshot>
-  <Screenshot>https://raw.githubusercontent.com/nofuturekid/tasmofleet/v0.34.0/docs/media/policy-editor.png</Screenshot>
+  <Screenshot>https://raw.githubusercontent.com/hellwand/tasmofleet/v0.34.1/docs/media/dashboard.png</Screenshot>
+  <Screenshot>https://raw.githubusercontent.com/hellwand/tasmofleet/v0.34.1/docs/media/devices.png</Screenshot>
+  <Screenshot>https://raw.githubusercontent.com/hellwand/tasmofleet/v0.34.1/docs/media/device-settings.png</Screenshot>
+  <Screenshot>https://raw.githubusercontent.com/hellwand/tasmofleet/v0.34.1/docs/media/policy-editor.png</Screenshot>
   <Changes>
+### 2026-11-06 (0.34.1 "Split Rock")
+- Moved: TasmoFleet now lives at github.com/hellwand/tasmofleet. Nothing to change in the template, Docker Hub (nofuturekid/tasmofleet) is unchanged. ghcr.io users: switch to ghcr.io/hellwand/tasmofleet. No database migration
+- New website https://hellwand.github.io/tasmofleet/ with the demo at https://hellwand.github.io/tasmofleet/demo/ (#566); the README is a landing page, details moved to docs/ (#565)
 ### 2026-11-06 (0.34.0 "Split Rock")
 - Nothing to change in the template. Database migration 0046 runs automatically: a snapshot interval becomes every day at 03:00; choose days and time on System, Snapshots
 - Database snapshots on chosen weekdays at a time of day, no snapshot at start (#602); your actions wait for a background device read instead of being refused (#670)
