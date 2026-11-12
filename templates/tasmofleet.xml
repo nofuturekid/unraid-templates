@@ -16,11 +16,14 @@
   <ExtraParams>--health-start-period=10s</ExtraParams>
   <PostArgs/>
   <Requires/>
-  <Screenshot>https://raw.githubusercontent.com/hellwand/tasmofleet/v0.34.1/docs/media/dashboard.png</Screenshot>
-  <Screenshot>https://raw.githubusercontent.com/hellwand/tasmofleet/v0.34.1/docs/media/devices.png</Screenshot>
-  <Screenshot>https://raw.githubusercontent.com/hellwand/tasmofleet/v0.34.1/docs/media/device-settings.png</Screenshot>
-  <Screenshot>https://raw.githubusercontent.com/hellwand/tasmofleet/v0.34.1/docs/media/policy-editor.png</Screenshot>
+  <Screenshot>https://raw.githubusercontent.com/hellwand/tasmofleet/v0.34.2/docs/media/dashboard.png</Screenshot>
+  <Screenshot>https://raw.githubusercontent.com/hellwand/tasmofleet/v0.34.2/docs/media/devices.png</Screenshot>
+  <Screenshot>https://raw.githubusercontent.com/hellwand/tasmofleet/v0.34.2/docs/media/device-settings.png</Screenshot>
+  <Screenshot>https://raw.githubusercontent.com/hellwand/tasmofleet/v0.34.2/docs/media/policy-editor.png</Screenshot>
   <Changes>
+### 2026-11-12 (0.34.2 "Split Rock")
+- Nothing to change in the template. No database migration
+- Settings tab loads again for devices on TasmoFleet's broker that do not answer over HTTP (#702); Sign-in: Test discovery answers in its own line (#705), hints name the TASMOFLEET_ variables (#719, #720); Authentik guide updated (#706)
 ### 2026-11-06 (0.34.1 "Split Rock")
 - Moved: TasmoFleet now lives at github.com/hellwand/tasmofleet. Nothing to change in the template, Docker Hub (nofuturekid/tasmofleet) is unchanged. ghcr.io users: switch to ghcr.io/hellwand/tasmofleet. No database migration
 - New website https://hellwand.github.io/tasmofleet/ with the demo at https://hellwand.github.io/tasmofleet/demo/ (#566); the README is a landing page, details moved to docs/ (#565)
