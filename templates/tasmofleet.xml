@@ -16,11 +16,14 @@
   <ExtraParams>--health-start-period=10s</ExtraParams>
   <PostArgs/>
   <Requires/>
-  <Screenshot>https://raw.githubusercontent.com/hellwand/tasmofleet/v0.34.2/docs/media/dashboard.png</Screenshot>
-  <Screenshot>https://raw.githubusercontent.com/hellwand/tasmofleet/v0.34.2/docs/media/devices.png</Screenshot>
-  <Screenshot>https://raw.githubusercontent.com/hellwand/tasmofleet/v0.34.2/docs/media/device-settings.png</Screenshot>
-  <Screenshot>https://raw.githubusercontent.com/hellwand/tasmofleet/v0.34.2/docs/media/policy-editor.png</Screenshot>
+  <Screenshot>https://raw.githubusercontent.com/hellwand/tasmofleet/v0.34.3/docs/media/dashboard.png</Screenshot>
+  <Screenshot>https://raw.githubusercontent.com/hellwand/tasmofleet/v0.34.3/docs/media/devices.png</Screenshot>
+  <Screenshot>https://raw.githubusercontent.com/hellwand/tasmofleet/v0.34.3/docs/media/device-settings.png</Screenshot>
+  <Screenshot>https://raw.githubusercontent.com/hellwand/tasmofleet/v0.34.3/docs/media/policy-editor.png</Screenshot>
   <Changes>
+### 2026-11-12 (0.34.3 "Split Rock")
+- Nothing to change in the template. No database migration
+- Devices list keeps up with its live updates on larger fleets (#726)
 ### 2026-11-12 (0.34.2 "Split Rock")
 - Nothing to change in the template. No database migration
 - Settings tab loads again for devices on TasmoFleet's broker that do not answer over HTTP (#702); Sign-in: Test discovery answers in its own line (#705), hints name the TASMOFLEET_ variables (#719, #720); Authentik guide updated (#706)
