@@ -16,11 +16,14 @@
   <ExtraParams>--health-start-period=10s</ExtraParams>
   <PostArgs/>
   <Requires/>
-  <Screenshot>https://raw.githubusercontent.com/hellwand/tasmofleet/v0.35.0/docs/media/dashboard.png</Screenshot>
-  <Screenshot>https://raw.githubusercontent.com/hellwand/tasmofleet/v0.35.0/docs/media/devices.png</Screenshot>
-  <Screenshot>https://raw.githubusercontent.com/hellwand/tasmofleet/v0.35.0/docs/media/device-settings.png</Screenshot>
-  <Screenshot>https://raw.githubusercontent.com/hellwand/tasmofleet/v0.35.0/docs/media/policy-editor.png</Screenshot>
+  <Screenshot>https://raw.githubusercontent.com/hellwand/tasmofleet/v0.36.0/docs/media/dashboard.png</Screenshot>
+  <Screenshot>https://raw.githubusercontent.com/hellwand/tasmofleet/v0.36.0/docs/media/devices.png</Screenshot>
+  <Screenshot>https://raw.githubusercontent.com/hellwand/tasmofleet/v0.36.0/docs/media/device-settings.png</Screenshot>
+  <Screenshot>https://raw.githubusercontent.com/hellwand/tasmofleet/v0.36.0/docs/media/policy-editor.png</Screenshot>
   <Changes>
+### 2026-11-13 (0.36.0 "Fisgard")
+- Nothing to change in the template. Database migration 0048 runs automatically (update jobs get a start time)
+- Plan an update for later: the update preview has a "When" card, planned updates are listed in Transactions with Cancel (#603, #604); every action shows that it runs and network errors say what failed (#634); the old ghcr.io/nofuturekid/tasmofleet package is deleted, Docker Hub is not affected (#738)
 ### 2026-11-13 (0.35.0 "Bishop Rock")
 - Nothing to change in the template. Database migration 0047 runs automatically (ids of deleted devices are never reused)
 - The failed scheduled backup message lists each device with hostname, address and reason (#685); snapshot file names are documented as UTC (#683); Add devices can restore dismissed address changes (#714); phone layout fixes (#678, #679, #680)
