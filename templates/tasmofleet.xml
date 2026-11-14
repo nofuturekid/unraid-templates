@@ -16,11 +16,14 @@
   <ExtraParams>--health-start-period=10s</ExtraParams>
   <PostArgs/>
   <Requires/>
-  <Screenshot>https://raw.githubusercontent.com/hellwand/tasmofleet/v0.36.1/docs/media/dashboard.png</Screenshot>
-  <Screenshot>https://raw.githubusercontent.com/hellwand/tasmofleet/v0.36.1/docs/media/devices.png</Screenshot>
-  <Screenshot>https://raw.githubusercontent.com/hellwand/tasmofleet/v0.36.1/docs/media/device-settings.png</Screenshot>
-  <Screenshot>https://raw.githubusercontent.com/hellwand/tasmofleet/v0.36.1/docs/media/policy-editor.png</Screenshot>
+  <Screenshot>https://raw.githubusercontent.com/hellwand/tasmofleet/v0.36.2/docs/media/dashboard.png</Screenshot>
+  <Screenshot>https://raw.githubusercontent.com/hellwand/tasmofleet/v0.36.2/docs/media/devices.png</Screenshot>
+  <Screenshot>https://raw.githubusercontent.com/hellwand/tasmofleet/v0.36.2/docs/media/device-settings.png</Screenshot>
+  <Screenshot>https://raw.githubusercontent.com/hellwand/tasmofleet/v0.36.2/docs/media/policy-editor.png</Screenshot>
   <Changes>
+### 2026-11-14 (0.36.2 "Fisgard")
+- Nothing to change in the template. No database migration
+- Devices list: every column keeps the width you set, a fit changes only that column, a layout wider than the window scrolls instead of being squeezed, and the row menu column has a fixed width (#828)
 ### 2026-11-14 (0.36.1 "Fisgard")
 - Nothing to change in the template. No database migration
 - Devices list keeps a saved column layout at the window width and keeps its sideways scroll on a live reload (#805, #806, #790); the Network scan result lists every device (#811); SetOption4 devices answer Upgrade over MQTT (#648); API-off devices are refreshed over MQTT (#676)
