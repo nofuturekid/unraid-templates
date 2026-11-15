@@ -16,11 +16,14 @@
   <ExtraParams>--health-start-period=10s</ExtraParams>
   <PostArgs/>
   <Requires/>
-  <Screenshot>https://raw.githubusercontent.com/hellwand/tasmofleet/v0.37.0/docs/media/dashboard.png</Screenshot>
-  <Screenshot>https://raw.githubusercontent.com/hellwand/tasmofleet/v0.37.0/docs/media/devices.png</Screenshot>
-  <Screenshot>https://raw.githubusercontent.com/hellwand/tasmofleet/v0.37.0/docs/media/device-settings.png</Screenshot>
-  <Screenshot>https://raw.githubusercontent.com/hellwand/tasmofleet/v0.37.0/docs/media/policy-editor.png</Screenshot>
+  <Screenshot>https://hellwand.github.io/tasmofleet/assets/dashboard.png</Screenshot>
+  <Screenshot>https://hellwand.github.io/tasmofleet/assets/devices.png</Screenshot>
+  <Screenshot>https://hellwand.github.io/tasmofleet/assets/device-settings.png</Screenshot>
+  <Screenshot>https://hellwand.github.io/tasmofleet/assets/policy-editor.png</Screenshot>
   <Changes>
+### 2026-11-15 (0.38.0 "Cape Reinga")
+- Nothing to change in the template. No database migration. The template's screenshots now link the pictures of the TasmoFleet website, so they always show the latest release
+- System → MQTT: an admin can confirm that the broker has an ACL, which hides the red ACL notice (#880); the notice also stands by the backup buttons (#853); a foreign device answering on a device's MQTT topic no longer receives its commands (#852); the identity probe reads broker, OTA URL and names over MQTT first (#851); a backup's result names its parts (#838); darker control borders for WCAG contrast (#829, #860, thanks @Noschvie); fixes to planned updates, restores, backups and Add devices (#817, #824, #825, #836, #844, #845, #846, #854, #855, #867)
 ### 2026-11-15 (0.37.0 "Kullen")
 - Nothing to change in the template. No database migration. Before you update: set up an ACL on your MQTT broker, TasmoFleet now sends commands, passwords and backups over MQTT first (guide: docs/mqtt-broker-acl.md in the repository) (#840)
 - Changes, Make compliant, backups and restores go over MQTT first, HTTP only where MQTT cannot (#605, #606, #607, #839); a broker ACL warning wherever MQTT secrets appear (#840); a Template with CMND is masked in logs (#843)
