@@ -16,11 +16,14 @@
   <ExtraParams>--health-start-period=10s</ExtraParams>
   <PostArgs/>
   <Requires/>
-  <Screenshot>https://raw.githubusercontent.com/hellwand/tasmofleet/v0.36.2/docs/media/dashboard.png</Screenshot>
-  <Screenshot>https://raw.githubusercontent.com/hellwand/tasmofleet/v0.36.2/docs/media/devices.png</Screenshot>
-  <Screenshot>https://raw.githubusercontent.com/hellwand/tasmofleet/v0.36.2/docs/media/device-settings.png</Screenshot>
-  <Screenshot>https://raw.githubusercontent.com/hellwand/tasmofleet/v0.36.2/docs/media/policy-editor.png</Screenshot>
+  <Screenshot>https://raw.githubusercontent.com/hellwand/tasmofleet/v0.37.0/docs/media/dashboard.png</Screenshot>
+  <Screenshot>https://raw.githubusercontent.com/hellwand/tasmofleet/v0.37.0/docs/media/devices.png</Screenshot>
+  <Screenshot>https://raw.githubusercontent.com/hellwand/tasmofleet/v0.37.0/docs/media/device-settings.png</Screenshot>
+  <Screenshot>https://raw.githubusercontent.com/hellwand/tasmofleet/v0.37.0/docs/media/policy-editor.png</Screenshot>
   <Changes>
+### 2026-11-15 (0.37.0 "Kullen")
+- Nothing to change in the template. No database migration. Before you update: set up an ACL on your MQTT broker, TasmoFleet now sends commands, passwords and backups over MQTT first (guide: docs/mqtt-broker-acl.md in the repository) (#840)
+- Changes, Make compliant, backups and restores go over MQTT first, HTTP only where MQTT cannot (#605, #606, #607, #839); a broker ACL warning wherever MQTT secrets appear (#840); a Template with CMND is masked in logs (#843)
 ### 2026-11-14 (0.36.2 "Fisgard")
 - Nothing to change in the template. No database migration
 - Devices list: every column keeps the width you set, a fit changes only that column, a layout wider than the window scrolls instead of being squeezed, and the row menu column has a fixed width (#828)
