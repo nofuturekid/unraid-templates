@@ -21,6 +21,9 @@
   <Screenshot>https://hellwand.github.io/tasmofleet/assets/device-settings.png</Screenshot>
   <Screenshot>https://hellwand.github.io/tasmofleet/assets/policy-editor.png</Screenshot>
   <Changes>
+### 2026-11-16 (0.39.0 "Boston Light")
+- Nothing to change in the template. No database migration
+- Device identity is read over MQTT first, the language build from Status 4 instead of the main page (#682, #686, thanks @Noschvie); updates stop firmware older than 10.0.0.3 at Tasmota 16.0.0 (#892); Add devices says why a device is not offered as new (#713, thanks @Noschvie); Back up all now works without a firmware base URL (#881); vendor builds without an image name are no longer refused (#872, thanks @rhasselbusch); fixes to backup texts, scheduled runs after a TZ change, update previews and HTTP reachability (#584, #882, #884, #889, #918, #919)
 ### 2026-11-15 (0.38.0 "Cape Reinga")
 - Nothing to change in the template. No database migration. The template's screenshots now link the pictures of the TasmoFleet website, so they always show the latest release
 - System → MQTT: an admin can confirm that the broker has an ACL, which hides the red ACL notice (#880); the notice also stands by the backup buttons (#853); a foreign device answering on a device's MQTT topic no longer receives its commands (#852); the identity probe reads broker, OTA URL and names over MQTT first (#851); a backup's result names its parts (#838); darker control borders for WCAG contrast (#829, #860, thanks @Noschvie); fixes to planned updates, restores, backups and Add devices (#817, #824, #825, #836, #844, #845, #846, #854, #855, #867)
