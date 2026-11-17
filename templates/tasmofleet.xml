@@ -21,6 +21,9 @@
   <Screenshot>https://hellwand.github.io/tasmofleet/assets/device-settings.png</Screenshot>
   <Screenshot>https://hellwand.github.io/tasmofleet/assets/policy-editor.png</Screenshot>
   <Changes>
+### 2026-11-17 (0.41.0 "Longstone")
+- Nothing to change in the template. Database migrations 0051 to 0053 run automatically. The first start takes each device's MQTT password from its newest backup, so more backups go over MQTT: check the broker ACL (System → MQTT) first. Breaking: the variable TASMOFLEET_MQTT_ACL_CONFIRMED is ignored, delete it if you added it (#609, #962)
+- Firmware updates send their commands over MQTT first (#608); device MQTT passwords from backups, with a password row on the device page and a card on System → MQTT (#609); written values are read back as Verified or Differs (#947); backup files over MQTT where the firmware supports it (#924, thanks @Noschvie); the broker ACL warning can be hidden with one option (#962); one rule for secrets (#809); fixes for two devices on one MQTT topic, light writes, group topics and the Backups page (#804, #812, #813, #875, #876, #877, #878, #879, #887, #949, #950, #951, #972)
 ### 2026-11-17 (0.40.0 "La Jument")
 - Nothing to change in the template. Database migrations 0049 and 0050 run automatically (tables for Web Push)
 - Web Push: Settings → Notifications subscribes a browser, sends a test and removes it again; notifications show with no TasmoFleet tab open (HTTPS or localhost needed) (#610, #611, #541); Devices, Backups deletes old backups and unreferenced files in bulk and is rearranged (#622, #684, thanks @Noschvie); planned updates on the Dashboard and in the status bar (#707); Create snapshot now (#921, thanks @Noschvie); why the last background refresh failed (#818); fixes to backup texts, the status bar and command suggestions (#869, #926, #934, thanks @Noschvie)
