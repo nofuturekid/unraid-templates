@@ -21,6 +21,9 @@
   <Screenshot>https://hellwand.github.io/tasmofleet/assets/device-settings.png</Screenshot>
   <Screenshot>https://hellwand.github.io/tasmofleet/assets/policy-editor.png</Screenshot>
   <Changes>
+### 2026-11-17 (0.40.0 "La Jument")
+- Nothing to change in the template. Database migrations 0049 and 0050 run automatically (tables for Web Push)
+- Web Push: Settings → Notifications subscribes a browser, sends a test and removes it again; notifications show with no TasmoFleet tab open (HTTPS or localhost needed) (#610, #611, #541); Devices, Backups deletes old backups and unreferenced files in bulk and is rearranged (#622, #684, thanks @Noschvie); planned updates on the Dashboard and in the status bar (#707); Create snapshot now (#921, thanks @Noschvie); why the last background refresh failed (#818); fixes to backup texts, the status bar and command suggestions (#869, #926, #934, thanks @Noschvie)
 ### 2026-11-16 (0.39.0 "Boston Light")
 - Nothing to change in the template. No database migration
 - Device identity is read over MQTT first, the language build from Status 4 instead of the main page (#682, #686, thanks @Noschvie); updates stop firmware older than 10.0.0.3 at Tasmota 16.0.0 (#892); Add devices says why a device is not offered as new (#713, thanks @Noschvie); Back up all now works without a firmware base URL (#881); vendor builds without an image name are no longer refused (#872, thanks @rhasselbusch); fixes to backup texts, scheduled runs after a TZ change, update previews and HTTP reachability (#584, #882, #884, #889, #918, #919)
