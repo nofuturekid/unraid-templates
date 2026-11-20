@@ -21,6 +21,9 @@
   <Screenshot>https://hellwand.github.io/tasmofleet/assets/device-settings.png</Screenshot>
   <Screenshot>https://hellwand.github.io/tasmofleet/assets/policy-editor.png</Screenshot>
   <Changes>
+### 2026-11-20 (0.43.0 "Les Eclaireurs")
+- Nothing to change in the template. No database migration
+- A Topic check card under System → Settings → MQTT says whether all device topics are unique or lists each collision; the Identity card of a device whose MQTT writes are held back names the colliding topic (#1047, thanks @Noschvie); one breadcrumb rule that agrees with the lit tab (#1000, thanks @Noschvie); GroupTopic values shown in the console and the audit (#1046); the HTTP API off hint leads with the device's own address (#1062); fixes #1043, #1015, #1044
 ### 2026-11-20 (0.42.0 "Cape Otway")
 - Nothing to change in the template. Database migration 0054 runs automatically (group topics 2 to 4). Right after the upgrade, writes over MQTT wait about a minute and a half until every device's group topics were read once; they go over HTTP meanwhile where they can (#1005)
 - Backups that only MQTT can take end at once with "Needs an MQTT password" and a link to the form (#997); backup runs in name order with the device ID shown as #N, answers in view, Last run as four tiles (#993, #994, #996); all four group topics read and checked (#1005); new version shown within a minute after an update done outside TasmoFleet (#1003); bulk result tile filter (#998), Transactions naming (#992), device ID on the Identity card (#1004), Status 0 refusal for MQTT-only devices (#1001), Make compliant page fixes (#1002), all thanks @Noschvie; fixes #986, #987, #988, #989, #990, #1015
