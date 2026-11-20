@@ -21,6 +21,9 @@
   <Screenshot>https://hellwand.github.io/tasmofleet/assets/device-settings.png</Screenshot>
   <Screenshot>https://hellwand.github.io/tasmofleet/assets/policy-editor.png</Screenshot>
   <Changes>
+### 2026-11-20 (0.44.0 "Montauk Point")
+- Nothing to change in the template. No database migration
+- The audit log's result badge, its pager and the About and What's new buttons use the design system; the result's colour always agrees with its word and table headers are no longer upper case (#1069); SetOption19's label and help say what the firmware does (#1063); setting help texts no longer present one power-loss policy as the fleet policy (#1064)
 ### 2026-11-20 (0.43.0 "Les Eclaireurs")
 - Nothing to change in the template. No database migration
 - A Topic check card under System → Settings → MQTT says whether all device topics are unique or lists each collision; the Identity card of a device whose MQTT writes are held back names the colliding topic (#1047, thanks @Noschvie); one breadcrumb rule that agrees with the lit tab (#1000, thanks @Noschvie); GroupTopic values shown in the console and the audit (#1046); the HTTP API off hint leads with the device's own address (#1062); fixes #1043, #1015, #1044
