@@ -21,6 +21,9 @@
   <Screenshot>https://hellwand.github.io/tasmofleet/assets/device-settings.png</Screenshot>
   <Screenshot>https://hellwand.github.io/tasmofleet/assets/policy-editor.png</Screenshot>
   <Changes>
+### 2026-11-21 (0.45.2 "Rubjerg Knude")
+- Nothing to change in the template. No database migration
+- Meaning that was only in a tooltip or a colour is on screen: update version, settings off policy and why a device is not Online on the Devices list, why a firmware download failed, glyphs on import plan badges, a progress bar that differs by shape (#1073); controls that repeat per row name their row for screen readers, power switches are real switches, and "Keep me signed in" is no longer ticked by default (#1074); on a phone, sideways-scrolling tab rows and chips fade the side with more and the device header keeps Edit, Replace device and Delete in a menu (#1079); the Backups card no longer reloads on every device change (#1153); readable user names with two badges on a phone (#1182); clearer offline banner on a device page (#1183); bulk action pages list devices sorted by name (#1188, thanks @Noschvie)
 ### 2026-11-21 (0.45.1 "Rubjerg Knude")
 - Nothing to change in the template. No database migration
 - A button that cannot act now says why as text on the page and stays reachable by keyboard and touch (#1072); info buttons and "Reset to default" are 24 px or larger targets, "Reset to default" says so in words, and filter chip counts are no longer dimmed (#1075, #1174); the users list keeps every badge in its column, "Must change password" is now "Password change due" (#1080); Devices → Add → Discovered shows the full IP address, a real "Show ignored" checkbox and known devices with a new address or a conflict as rows of the same table (#1081, #905)
