@@ -21,6 +21,9 @@
   <Screenshot>https://hellwand.github.io/tasmofleet/assets/device-settings.png</Screenshot>
   <Screenshot>https://hellwand.github.io/tasmofleet/assets/policy-editor.png</Screenshot>
   <Changes>
+### 2026-11-22 (0.47.1 "Pigeon Point")
+- Nothing to change in the template. No database migration
+- Security: ending all sessions of an SSO user checks that the acting local admin is still an admin (#1227); a form never shows the same error twice: a wrong sign-in shows its message under the password field only, and two or more refused fields get one "Fix 2 fields." summary in the same words on every form (#1098); every banner is the one banner component with at most one action, and a long firmware URL on the Make compliant plan wraps inside its card (#1091)
 ### 2026-11-22 (0.47.0 "Pigeon Point")
 - Nothing to change in the template. No database migration
 - Security: ending a single session of another local user checks that the acting admin is still an admin (#1203); the Dashboard shows finished transactions as compact rows with their result and time (#1199, thanks @Noschvie); a Command Error is the same error over MQTT as over HTTP, with no timeout wait and no switch to HTTP (#1209); the Sign-in tab says which mode is in use now, in words (#1220); phone controls are 44 px tall (#1169); the Copy button is one small button everywhere (#1092)
