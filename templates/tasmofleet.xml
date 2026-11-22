@@ -21,6 +21,9 @@
   <Screenshot>https://hellwand.github.io/tasmofleet/assets/device-settings.png</Screenshot>
   <Screenshot>https://hellwand.github.io/tasmofleet/assets/policy-editor.png</Screenshot>
   <Changes>
+### 2026-11-22 (0.46.2 "Cape Agulhas")
+- Nothing to change in the template. No database migration
+- A refused, missing or switched-off page keeps its place in the navigation and offers a next step, error pages are a centred card, and an account without a role gets a Sign out card (#1085); the Sign-in settings state the active mode in words (#1087); the connection banners sit in the page flow and the Dashboard no longer says live while offline (#1089); a failed release check on the Firmware page is one warning banner with one Try again (#1090); the Changes tab's page title says changes (#1211)
 ### 2026-11-21 (0.46.1 "Cape Agulhas")
 - Nothing to change in the template. No database migration. A policy rules file or settings export written by 0.46.1 cannot be imported by 0.46.0 or older
 - The Changes tab (was Drift) no longer shows read errors as changed settings and says in plain words what differs from the last backup (#1083); the Policy page shows its fleet counts as one summary line and the counts agree (#1086); the policy rules file uses the words of the page ("level", "expected"; older files still import) and Import / export is a tab of the Policy page with a preview of every rule (#1088)
