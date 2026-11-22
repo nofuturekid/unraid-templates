@@ -21,6 +21,9 @@
   <Screenshot>https://hellwand.github.io/tasmofleet/assets/device-settings.png</Screenshot>
   <Screenshot>https://hellwand.github.io/tasmofleet/assets/policy-editor.png</Screenshot>
   <Changes>
+### 2026-11-22 (0.47.0 "Pigeon Point")
+- Nothing to change in the template. No database migration
+- Security: ending a single session of another local user checks that the acting admin is still an admin (#1203); the Dashboard shows finished transactions as compact rows with their result and time (#1199, thanks @Noschvie); a Command Error is the same error over MQTT as over HTTP, with no timeout wait and no switch to HTTP (#1209); the Sign-in tab says which mode is in use now, in words (#1220); phone controls are 44 px tall (#1169); the Copy button is one small button everywhere (#1092)
 ### 2026-11-22 (0.46.2 "Cape Agulhas")
 - Nothing to change in the template. No database migration
 - A refused, missing or switched-off page keeps its place in the navigation and offers a next step, error pages are a centred card, and an account without a role gets a Sign out card (#1085); the Sign-in settings state the active mode in words (#1087); the connection banners sit in the page flow and the Dashboard no longer says live while offline (#1089); a failed release check on the Firmware page is one warning banner with one Try again (#1090); the Changes tab's page title says changes (#1211)
