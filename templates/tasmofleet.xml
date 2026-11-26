@@ -21,6 +21,9 @@
   <Screenshot>https://hellwand.github.io/tasmofleet/assets/device-settings.png</Screenshot>
   <Screenshot>https://hellwand.github.io/tasmofleet/assets/policy-editor.png</Screenshot>
   <Changes>
+### 2026-11-26 (0.48.1 "Kannonzaki")
+- Nothing to change in the template. No database migration
+- Six WCAG 2.2 AA fixes: dark-theme red button label, visible switch knobs, health and compliance bars not by hue only, 24 px sort links, long device names in full, focus clear of the sticky bars (#1266, #1267, #1268, #1272, #1273, #1274); layouts switch only at the design system's widths and one tone set for badges, banners and toasts (#1102); one link style and the mono font only for addresses, versions and ids (#1103)
 ### 2026-11-26 (0.48.0 "Kannonzaki")
 - Nothing to change in the template. No database migration
 - Every date and time is written one way, in the browser's language, order and time zone (#1104); one word per result: Succeeded, Waiting (#1105); one keyboard focus ring, one dialog backdrop and reduced motion honoured (#1099); one type scale and one spacing scale, sibling cards 16 px apart (#1100, #1101)
