@@ -21,6 +21,9 @@
   <Screenshot>https://hellwand.github.io/tasmofleet/assets/device-settings.png</Screenshot>
   <Screenshot>https://hellwand.github.io/tasmofleet/assets/policy-editor.png</Screenshot>
   <Changes>
+### 2026-11-26 (0.47.2 "Pigeon Point")
+- Nothing to change in the template. No database migration
+- Security: gorilla/websocket at the fixed commit for GO-2026-6278 (#1249); destructive actions confirm with a red button that names the action, with the focus on Cancel (#1093); data tables share one header, a caption and one pager (#1094); chips and tags have one look (#1095), a selected control is the accent tint with two switch sizes (#1096), the connection status is one badge everywhere (#1097); System settings mark every refused setting (#1236); the policy Source column says "not in backup" (#1240, thanks @Noschvie); the drift view ignores PsrFree (#1245, thanks @Noschvie)
 ### 2026-11-22 (0.47.1 "Pigeon Point")
 - Nothing to change in the template. No database migration
 - Security: ending all sessions of an SSO user checks that the acting local admin is still an admin (#1227); a form never shows the same error twice: a wrong sign-in shows its message under the password field only, and two or more refused fields get one "Fix 2 fields." summary in the same words on every form (#1098); every banner is the one banner component with at most one action, and a long firmware URL on the Make compliant plan wraps inside its card (#1091)
