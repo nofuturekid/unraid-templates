@@ -21,6 +21,9 @@
   <Screenshot>https://hellwand.github.io/tasmofleet/assets/device-settings.png</Screenshot>
   <Screenshot>https://hellwand.github.io/tasmofleet/assets/policy-editor.png</Screenshot>
   <Changes>
+### 2026-11-26 (0.48.0 "Kannonzaki")
+- Nothing to change in the template. No database migration
+- Every date and time is written one way, in the browser's language, order and time zone (#1104); one word per result: Succeeded, Waiting (#1105); one keyboard focus ring, one dialog backdrop and reduced motion honoured (#1099); one type scale and one spacing scale, sibling cards 16 px apart (#1100, #1101)
 ### 2026-11-26 (0.47.2 "Pigeon Point")
 - Nothing to change in the template. No database migration
 - Security: gorilla/websocket at the fixed commit for GO-2026-6278 (#1249); destructive actions confirm with a red button that names the action, with the focus on Cancel (#1093); data tables share one header, a caption and one pager (#1094); chips and tags have one look (#1095), a selected control is the accent tint with two switch sizes (#1096), the connection status is one badge everywhere (#1097); System settings mark every refused setting (#1236); the policy Source column says "not in backup" (#1240, thanks @Noschvie); the drift view ignores PsrFree (#1245, thanks @Noschvie)
