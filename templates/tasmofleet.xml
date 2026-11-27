@@ -21,6 +21,9 @@
   <Screenshot>https://hellwand.github.io/tasmofleet/assets/device-settings.png</Screenshot>
   <Screenshot>https://hellwand.github.io/tasmofleet/assets/policy-editor.png</Screenshot>
   <Changes>
+### 2026-11-27 (0.49.2 "South Stack")
+- Nothing to change in the template. No database migration
+- A first run has an order: the empty Devices page shows admins three steps (MQTT broker, add devices, back up), the setup asks for the broker first; the dashboard heading is "Dashboard" (#1050); "Skip to content" as first Tab stop, a close button in the phone drawer, an Account sheet behind the avatar, "Status" on the phone status bar (#1077); Needs attention lists each device once, every group titled (#1303); no "Boot loop" for planned restarts after 2 minutes or more (#1308); imported rules apply at once (#1309); What's new shows the 0.49.0 notification-title note as a warning (#1301); keyboard focus no longer hides under pinned columns (#1275)
 ### 2026-11-26 (0.49.1 "South Stack")
 - Nothing to change in the template. No database migration
 - Devices list in plain words: "Reachable via" column, Offline and Unknown chips, "Open web UI" in the row menu (#1132, #1204, thanks @Noschvie); phone filters in one strip with a Filters button and a simple Columns menu (#1133); columns fit their content (#906, #908, #912); device overview with each fact once and "Open web UI" on the Address row (#1112, #1204, thanks @Noschvie); Add devices with one first route (#1110)
